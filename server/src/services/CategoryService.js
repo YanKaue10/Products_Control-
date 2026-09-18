@@ -8,7 +8,7 @@ export const createCategory = async(data) => {
     return await Category.create(data)
 }
 
-export const getCategorybyId = async (id) => {
+export const getCategoryById = async (id) => {
     const category = await Category.findById(id)
 
     if (!category) {

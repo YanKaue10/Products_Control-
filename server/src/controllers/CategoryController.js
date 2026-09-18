@@ -16,7 +16,7 @@ export const createCategory = async (req, res) => {
         const category = await categoryService.createCategory(req.body)
          return res.status(201).json({
       message: "Categoria criado com sucesso.",
-      product,
+      category,
     });
     } catch (error) {
          return res.status(500).json({
@@ -31,7 +31,7 @@ export const getCategoryById = async (req, res) => {
     return res.status(200).json(category);
   } catch (error) {
     return res.status(404).json({
-      message: error.message,
+      message: error.message
     });
   }
 };
